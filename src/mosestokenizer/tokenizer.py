@@ -1,8 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 """
 A module for interfacing with ``tokenizer.perl`` from Moses.
 
 Copyright ® 2016-2017, Luís Gomes <luismsgomes@gmail.com>
 """
+
+from __future__ import print_function
 
 usage = """
 Usage:
@@ -21,7 +26,6 @@ Options:
 
 
 from docopt import docopt
-from openfile import openfile
 from os import path
 from toolwrapper import ToolWrapper
 import sys
@@ -83,8 +87,8 @@ def main():
         args["<lang>"],
         old_version=args["--old"],
     )
-    inputfile = openfile(args["<inputfile>"])
-    outputfile = openfile(args["<outputfile>"], "wt")
+    inputfile = open(args["<inputfile>"])
+    outputfile = open(args["<outputfile>"], "wt")
     with inputfile, outputfile:
         for line in inputfile:
             print(*tokenize(line), file=outputfile)

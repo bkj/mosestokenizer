@@ -45,7 +45,6 @@ setup(
     keywords='text tokenization pre-processing',
     install_requires=[
         "docopt",
-        "openfile",
         "toolwrapper",
     ],
     packages=find_packages('src'),

@@ -1,8 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 """
 A module for interfacing with ``split-sentences.perl`` from Moses toolkit.
 
 Copyright ® 2016-2017, Luís Gomes <luismsgomes@gmail.com>
 """
+
+from __future__ import print_function
 
 usage = """
 Usage:
@@ -26,7 +31,6 @@ Options:
 
 
 from docopt import docopt
-from openfile import openfile
 from os import path
 from toolwrapper import ToolWrapper
 import sys
@@ -122,8 +126,8 @@ def main():
         if not args["<lang>"]:
             sys.exit(0)
     split_sents = MosesSentenceSplitter(args["<lang>"], more=args["--more"])
-    inputfile = openfile(args["<inputfile>"])
-    outputfile = openfile(args["<outputfile>"], "wt")
+    inputfile = open(args["<inputfile>"])
+    outputfile = open(args["<outputfile>"], "wt")
     with inputfile, outputfile:
         paragraphs = read_paragraphs(inputfile, wrapped=args["--unwrap"])
         paragraphs = map(split_sents, paragraphs)

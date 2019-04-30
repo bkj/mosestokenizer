@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 """
 Wrappers for several pre-processing scripts from the Moses toolkit.
 

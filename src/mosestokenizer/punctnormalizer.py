@@ -1,8 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 """
 A module for interfacing with ``normalize-punctuation.perl`` from Moses.
 
 Copyright ® 2016-2017, Luís Gomes <luismsgomes@gmail.com>
 """
+
+from __future__ import print_function
 
 usage = """
 Usage:
