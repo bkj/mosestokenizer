@@ -30,7 +30,7 @@ setup(
                 ' toolkit.',
     long_description=read('README.rst'),
     url='https://bitbucket.org/luismsgomes/mosestokenizer',
-    author='Luís Gomes',
+    author='Luis Gomes',
     author_email='luismsgomes@gmail.com',
     license='LGPLv2',
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -40,7 +40,6 @@ setup(
         'Topic :: Text Processing :: Linguistic',
         'License :: OSI Approved :: GNU Lesser General Public License v2'
             ' or later (LGPLv2+)',
-        'Programming Language :: Python :: 3.5',
     ],
     keywords='text tokenization pre-processing',
     install_requires=[
